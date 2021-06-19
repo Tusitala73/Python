@@ -1,0 +1,5 @@
+{
+    "python.linting.pylintEnabled": true,
+    "editor.fontFamily": "source code pro",
+    "python.pythonPath": "C:\\Anaconda3\\python.exe"
+}
