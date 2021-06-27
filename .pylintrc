@@ -4,3 +4,4 @@ disable=
     C0115, # missing-class-docstring
     C0116, # missing-function-docstring 
     E0611, # (no-name-in-module)
+    #W293, #
