@@ -10,7 +10,7 @@ class MainWindow(QMainWindow):  # se crea pantalla principal
         self.setMinimumSize(QSize(480, 320))  # le damos un tamaño
         texto = QLineEdit()  # creamos un QLineEdit
         texto.textChanged.connect(self.texto_modificado)
-        ''' cuando cambia texto llamamos a texto_modificado'''
+        # cuando cambia texto llamamos a texto_modificado
         self.setCentralWidget(texto)  # ubicamos a texto en el Widget central
         self.texto = texto  # creamos puntero para acceder al Widget desde un método externo
 
