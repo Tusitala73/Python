@@ -40,10 +40,10 @@ class InsercionDatosBDAplicacion(QDialog):
             nombre_bd = nombre_bd + '.db'
             if os.path.exists(nombre_bd):
                 try:
-                    self.conexion = sqlite3.connect("nombre_bd")
+                    self.conexion = sqlite3.connect(absPath("nombre_bd"))
                     self.mensajes.setText('la conexion se realizo correctamente')
                     self.mensajes.setIcon(QMessageBox.Information)
-                    self.mensajes.exec_()
+                    self.mensajes.exec()
 
                     self.ui.txt_id.setEnabled(True)
                     self.ui.txt_nombre_tabla.setEnabled(True)
@@ -56,15 +56,15 @@ class InsercionDatosBDAplicacion(QDialog):
                 except Error as error:
                     self.mensajes.setText('No se puede abrir la base de datos')
                     self.mensajes.setIcon(QMessageBox.Warning)
-                    self.mensajes.exec_()
+                    self.mensajes.exec()
             else:
                 self.mensajes.setText('No existe la base de datos: {}'.format(nombre_bd))
                 self.mensajes.setIcon(QMessageBox.Warning)
-                self.mensajes.exec_()
+                self.mensajes.exec()
         else:
             self.mensajes.setText('Debe de escribir un nombre valido para la base de datos')
             self.mensajes.setIcon(QMessageBox.Warning)
-            self.mensajes.exec_()
+            self.mensajes.exec()
 
     def insertar(self):
         pass
@@ -75,4 +75,4 @@ if __name__ == '__main__':
     ventana = InsercionDatosBDAplicacion()
     ventana.show()
 
-    sys.exit(app.exec_())
+    sys.exit(app.exec())
