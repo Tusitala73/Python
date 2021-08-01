@@ -70,19 +70,27 @@ class InsercionDatosBDAplicacion(QDialog):
             self.mensajes.exec()
 
     def insertar(self):
-        nombre_tabla = self.ui.txt_nombre_tabla().strip()
+        nombre_tabla = self.ui.txt_nombre_tabla.text().strip()
 
         if self.regex.match(nombre_tabla) is not None:
-            valor_id = self.ui.txt_id().strip()
+            valor_id = self.ui.txt_id.text().strip()
 
             if self.regex_numero.match(valor_id) is not None:
                 if not self.existe_id(nombre_tabla, valor_id):
                     nombre_producto = self.ui.txt_nombre.text().strip()
                     if self.regex.match(nombre_producto) is not None:
-                        sql = '''INSERT INTO {} VALUES({}, {})'''.format(nombre_tabla, valor_id, nombre_producto)
+                        sql = '''INSERT INTO {} VALUES({}, '{}')'''.format(nombre_tabla, valor_id, nombre_producto)
                         cur = self.conexion.cursor()
                         cur.execute(sql)
                         self.conexion.commit()
+
+                        self.mensajes.setText('Articulo se añadio correctamente')
+                        self.mensajes.setIcon(QMessageBox.Information)
+                        self.mensajes.exec()
+
+                        # self.ui.txt_nombre_tabla.setText('')
+                        self.ui.txt_id.setText('')
+                        self.ui.txt_nombre.setText('')
 
                     else:
                         self.mensajes.setText('debe de introducir un nombre de producto valido')
