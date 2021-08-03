@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ConsultaBaseDatosDialog</class>
+ <widget class="QDialog" name="ConsultaBaseDatosDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>439</width>
+    <height>349</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>SQLite: Consulta de Datos</string>
+  </property>
+  <widget class="QLabel" name="lbl_nombre_base_datos">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>34</y>
+     <width>131</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Nombre base de datos:</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="txt_nombre_base_datos">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>30</y>
+     <width>241</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_nombre_tabla">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>63</y>
+     <width>91</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Nombre Tabla:</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="txt_nombre_tabla">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>60</y>
+     <width>241</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_concultar_datos">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>90</y>
+     <width>241</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Consultar datos</string>
+   </property>
+  </widget>
+  <widget class="QTableWidget" name="tbl_datos">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>130</y>
+     <width>411</width>
+     <height>181</height>
+    </rect>
+   </property>
+   <property name="rowCount">
+    <number>3</number>
+   </property>
+   <property name="columnCount">
+    <number>2</number>
+   </property>
+   <row/>
+   <row/>
+   <row/>
+   <column/>
+   <column/>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
