@@ -47,7 +47,7 @@ class ConsultaBaseDatosAplicacion(QDialog):
                             for p in productos:
                                 columna = 0
                                 for c in p:
-                                    celda = QTableWidgetItem(c)
+                                    celda = QTableWidgetItem(str(c))
                                     self.ui.tbl_datos.setItem(fila, columna, celda)
                                     columna += 1
 
